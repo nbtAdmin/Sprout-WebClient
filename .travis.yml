@@ -1,0 +1,43 @@
+sudo: required
+services:
+  - docker
+
+branches:
+  only:
+    - master
+    - develop
+
+script:
+  - docker build -t nbtadmin/sprout-webapp-nginx ./nginx
+  - docker build -t nbtadmin/sprout-webapp ./webapp
+
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+
+  - docker push nbtadmin/sprout-webapp-nginx
+  - docker push nbtadmin/sprout-webapp
+
+deploy:
+  - provider: elasticbeanstalk
+    region: us-east-2
+    on:
+      branch: develop
+    app: SproutDev
+    env: SproutWebAppDev
+    bucket_name: elasticbeanstalk-us-east-2-780000951144
+    bucket_path: sprout-dev-env
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+      secure: $AWS_SECRET_KEY
+  - provider: elasticbeanstalk
+    region: us-east-2
+    on:
+      branch: master
+    app: SproutProd
+    env: SproutProdWebApp
+    bucket_name: elasticbeanstalk-us-east-2-780000951144
+    bucket_path: sprout-prod-env
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+      secure: $AWS_SECRET_KEY
