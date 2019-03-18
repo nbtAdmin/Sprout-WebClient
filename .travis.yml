@@ -3,15 +3,15 @@ services:
   - docker
 
 script:
-  - docker build -t nbtadmin/sprout-api-nginx ./nginx
-  - docker build -t nbtadmin/sprout-api ./api
+  - docker build -t nbtadmin/sprout-webapp-nginx ./nginx
+  - docker build -t nbtadmin/sprout-webapp ./webapp
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
 
-  - docker push nbtadmin/sprout-api-nginx
-  - docker push nbtadmin/sprout-api
+  - docker push nbtadmin/sprout-webapp-nginx
+  - docker push nbtadmin/sprout-webapp
 
 deploy:
   provider: elasticbeanstalk
