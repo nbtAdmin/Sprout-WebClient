@@ -1,0 +1,26 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "webapp1",
+      "image": "nbtadmin/sprout-webapp",
+      "hostname": "api",
+      "essential": false,
+      "memory": 384
+    },
+    {
+      "name": "nginx",
+      "image": "nbtadmin/sprout-webapp-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["webapp1"],
+      "memory": 128
+    }
+  ]
+}
