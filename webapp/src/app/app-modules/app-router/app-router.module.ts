@@ -1,12 +1,17 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Routes, RouterModule } from "@angular/router";
-import { MockComponent } from "../../components/mock/mock.component";
+import { HomeComponent } from "../../components/core/home.component";
+import { DashboardComponent } from "../../components/dashboard/dashboard.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: MockComponent
+    component: HomeComponent
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent
   }
 ];
 

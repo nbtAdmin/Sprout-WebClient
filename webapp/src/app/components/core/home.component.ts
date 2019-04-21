@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-mock",
-  templateUrl: "./mock.component.html",
-  styleUrls: ["./mock.component.scss"]
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"]
 })
-export class MockComponent implements OnInit {
+export class HomeComponent implements OnInit {
   public _showUseCase1: Boolean = false;
   public _showUseCase2: Boolean = false;
 
