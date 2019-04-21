@@ -10,10 +10,11 @@ import { NavbarComponent } from "./components/shared/navbar/navbar.component";
 import { UseCaseFormComponent } from './components/core/use-case-form/use-case-form.component';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { SidenavComponent } from "./components/shared/sidenav/sidenav.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent, UseCaseFormComponent, DashboardComponent, SidenavComponent],
-  imports: [BrowserModule, AppRouterModule, MDBBootstrapModule.forRoot()],
+  imports: [BrowserModule, AppRouterModule, MDBBootstrapModule.forRoot(), BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
