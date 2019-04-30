@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "../../components/core/home.component";
 import { DashboardComponent } from "../../components/dashboard/dashboard.component";
+import { EventsCreateComponent } from "../../components/events/events-create/events-create.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: "dashboard",
     component: DashboardComponent
+  }, 
+  {
+    path:"create-events",
+    component: EventsCreateComponent
   }
 ];
 
