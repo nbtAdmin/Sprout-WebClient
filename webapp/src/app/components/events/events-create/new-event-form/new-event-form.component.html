@@ -1,0 +1,83 @@
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="eventNameFormGroup">
+          <form [formGroup]="eventNameFormGroup" class="example-form">
+            <ng-template matStepLabel>Event Name</ng-template>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="The Name of your event" formControlName="eventName" required>
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button matStepperNext color="primary">Next</button>
+            </div>
+          </form>
+      </mat-step>
+
+      <mat-step [stepControl]="eventDescriptionFormGroup">
+          <form [formGroup]="eventDescriptionFormGroup" class="example-form">
+            <ng-template matStepLabel>Fill out a short description of your event</ng-template>
+            <mat-form-field class="example-full-width">
+                <textarea matInput
+                          cdkTextareaAutosize 
+                          placeholder="description" 
+                          cdkAutosizeMinRows="2"
+                          cdkAutosizeMaxRows="5"
+                          formControlName="eventDescription" 
+                          required>
+                </textarea>
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button color="accent" matStepperPrevious class="button-pad">Back</button>
+              <button mat-stroked-button color="primary" matStepperNext class="button-pad">Next</button>
+            </div>
+          </form>
+      </mat-step>
+
+      <mat-step [stepControl]="eventImageUriFormGroup">
+          <form [formGroup]="eventImageUriFormGroup" class="example-form">
+            <ng-template matStepLabel>Image for your Event</ng-template>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Image url or upload" formControlName="eventImageUri" required>
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button color="accent" matStepperPrevious class="button-pad">Back</button>
+              <button mat-stroked-button matStepperNext color="primary" class="button-pad">Next</button>
+              <button mat-raised-button color="warn" 
+                      (click)="previewEventInfo()">
+                      Upload Image
+              </button>
+            </div>
+          </form>
+      </mat-step>
+
+      <mat-step [stepControl]="eventStartDateFormGroup">
+          <form [formGroup]="eventStartDateFormGroup" class="example-form">
+            <ng-template matStepLabel>Event Start Date</ng-template>
+            <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" formControlName="eventStartDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button color="accent" matStepperPrevious class="button-pad">Back</button>
+              <button mat-stroked-button color="primary" matStepperNext class="button-pad">Next</button>
+            </div>
+          </form>
+      </mat-step>
+
+      <mat-step [stepControl]="eventEndDateFormGroup">
+          <form [formGroup]="eventEndDateFormGroup" class="example-form">
+            <ng-template matStepLabel>For Multi Day Events pick and end date</ng-template>
+            <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="endpicker" formControlName="eventEndDate">
+                <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+                <mat-datepicker #endpicker></mat-datepicker>
+            </mat-form-field>
+            <div>
+              <button mat-raised-button color="primary" class="button-pad"
+                (click)="previewEventInfo()">
+                Preview Event Info
+              </button>
+              <button mat-stroked-button color="accent" matStepperPrevious class="button-pad">Back</button>  
+            </div>
+          </form>
+      </mat-step>
+</mat-vertical-stepper>
