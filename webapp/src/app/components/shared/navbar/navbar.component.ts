@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  public _showSideNav: Boolean = false;
+
+  
 
   constructor() { }
 
+  
   ngOnInit() {
   }
 
-  showSideNav() {
-    this._showSideNav = !this._showSideNav;
-  }
+
+  
 
 }

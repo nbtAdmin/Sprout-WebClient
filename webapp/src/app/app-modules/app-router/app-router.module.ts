@@ -4,20 +4,13 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "../../components/core/home.component";
 import { DashboardComponent } from "../../components/dashboard/dashboard.component";
 import { EventsCreateComponent } from "../../components/events/events-create/events-create.component";
+import { LoginComponent } from "../../components/auth/login/login.component";
 
 const routes: Routes = [
-  {
-    path: "",
-    component: HomeComponent
-  },
-  {
-    path: "dashboard",
-    component: DashboardComponent
-  }, 
-  {
-    path:"create-events",
-    component: EventsCreateComponent
-  }
+  { path: "home", component: HomeComponent },
+  { path:"login", component:LoginComponent },
+  { path: "dashboard", component: DashboardComponent }, 
+  { path:"create-events", component: EventsCreateComponent }
 ];
 
 @NgModule({

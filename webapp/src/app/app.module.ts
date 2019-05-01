@@ -23,6 +23,9 @@ import { CustomSiteComponent } from './components/events/events-create/custom-si
 import { NewEventFormComponent } from './components/events/events-create/new-event-form/new-event-form.component';
 import { NewEventConfirmComponent } from './components/events/events-create/new-event-confirm/new-event-confirm.component';
 import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
+import { AuthService } from "./services/auth/auth.service";
+import { LoginComponent } from './components/auth/login/login.component';
+import { DashnavComponent } from './components/dashboard/dashnav/dashnav.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,13 @@ import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
     NavbarComponent, 
     UseCaseFormComponent, 
     DashboardComponent, 
-    SidenavComponent, EventsCreateComponent, EventsCreateNavComponent, CustomSiteComponent, NewEventFormComponent, NewEventConfirmComponent
+    SidenavComponent, 
+    EventsCreateComponent, 
+    EventsCreateNavComponent, 
+    CustomSiteComponent, 
+    NewEventFormComponent, 
+    NewEventConfirmComponent, 
+    LoginComponent, DashnavComponent  
   ],
   imports: [
     BrowserModule, 
@@ -42,7 +51,7 @@ import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
     MDBBootstrapModule.forRoot(),
     NgMaterialModule, 
     BrowserAnimationsModule],
-  providers: [SproutApiService],
+  providers: [SproutApiService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
