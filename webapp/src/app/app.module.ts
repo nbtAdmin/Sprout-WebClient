@@ -11,7 +11,6 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./components/core/home.component";
 import { UseCaseFormComponent } from './components/core/use-case-form/use-case-form.component';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
-import { SidenavComponent } from "./components/shared/sidenav/sidenav.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -30,7 +29,7 @@ import { NavComponent } from './components/shared/nav/nav.component';
     HomeComponent, 
     UseCaseFormComponent, 
     DashboardComponent, 
-    SidenavComponent, EventsCreateComponent, EventsCreateNavComponent, CustomSiteComponent, NewEventFormComponent, NewEventConfirmComponent, NavComponent
+     EventsCreateComponent, EventsCreateNavComponent, CustomSiteComponent, NewEventFormComponent, NewEventConfirmComponent, NavComponent
   ],
   imports: [
     BrowserModule, 
