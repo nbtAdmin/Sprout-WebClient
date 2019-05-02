@@ -9,7 +9,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./components/core/home.component";
-import { NavbarComponent } from "./components/shared/navbar/navbar.component";
 import { UseCaseFormComponent } from './components/core/use-case-form/use-case-form.component';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { SidenavComponent } from "./components/shared/sidenav/sidenav.component";
@@ -23,15 +22,15 @@ import { CustomSiteComponent } from './components/events/events-create/custom-si
 import { NewEventFormComponent } from './components/events/events-create/new-event-form/new-event-form.component';
 import { NewEventConfirmComponent } from './components/events/events-create/new-event-confirm/new-event-confirm.component';
 import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
+import { NavComponent } from './components/shared/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     HomeComponent, 
-    NavbarComponent, 
     UseCaseFormComponent, 
     DashboardComponent, 
-    SidenavComponent, EventsCreateComponent, EventsCreateNavComponent, CustomSiteComponent, NewEventFormComponent, NewEventConfirmComponent
+    SidenavComponent, EventsCreateComponent, EventsCreateNavComponent, CustomSiteComponent, NewEventFormComponent, NewEventConfirmComponent, NavComponent
   ],
   imports: [
     BrowserModule, 
