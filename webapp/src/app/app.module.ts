@@ -9,10 +9,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./components/core/home.component";
-import { NavbarComponent } from "./components/shared/navbar/navbar.component";
 import { UseCaseFormComponent } from './components/core/use-case-form/use-case-form.component';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
-import { SidenavComponent } from "./components/shared/sidenav/sidenav.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -26,21 +24,26 @@ import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
 import { AuthService } from "./services/auth/auth.service";
 import { LoginComponent } from './components/auth/login/login.component';
 import { DashnavComponent } from './components/dashboard/dashnav/dashnav.component';
+import { NavComponent } from './components/shared/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     HomeComponent, 
-    NavbarComponent, 
     UseCaseFormComponent, 
-    DashboardComponent, 
-    SidenavComponent, 
+    DashboardComponent,  
     EventsCreateComponent, 
     EventsCreateNavComponent, 
     CustomSiteComponent, 
     NewEventFormComponent, 
     NewEventConfirmComponent, 
-    LoginComponent, DashnavComponent  
+    LoginComponent, 
+    DashnavComponent,
+    EventsCreateNavComponent, 
+    CustomSiteComponent, 
+    NewEventFormComponent, 
+    NewEventConfirmComponent, 
+    NavComponent
   ],
   imports: [
     BrowserModule, 

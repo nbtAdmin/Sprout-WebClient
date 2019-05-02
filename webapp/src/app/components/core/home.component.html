@@ -1,1 +1,14 @@
-<app-navbar></app-navbar>
+<div class="container-fluid text-center home">
+  <div class="row">
+    <div class="col">
+      <h3 (click)="selectUseCase1()">Find an Event</h3>
+      
+      <div *ngIf="_showUseCase1"><app-use-case-form></app-use-case-form></div>
+    </div>
+    <div class="col">
+      <h3 (click)="selectUseCase2()">Plan an Event</h3>
+      <button routerLink="/dashboard"></button>
+      <div *ngIf="_showUseCase2"><app-use-case-form></app-use-case-form></div>
+    </div>
+  </div>
+</div>

@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- 
-  title = 'webapp';
 
-  
 
+  title = 'Follium';
+
+  _isHome= true;
+  _isPlanEvent = false;
 }
