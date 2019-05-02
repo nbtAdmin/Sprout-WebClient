@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { 
+  MatButtonModule, 
+  MatCheckboxModule, 
+  MatToolbarModule, 
+  MatIconModule,
+  MatSidenavModule,
+  MatButtonToggleModule,
+  MatExpansionModule, 
+  MatRippleModule
+ } from '@angular/material';
+
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -15,9 +25,15 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [],
   imports: [ MatButtonModule, MatCheckboxModule, MatStepperModule, 
              MatFormFieldModule, MatInputModule, MatDatepickerModule, 
-             MatNativeDateModule, MatCardModule ],
+             MatNativeDateModule, MatCardModule, MatToolbarModule, 
+             MatIconModule, MatSidenavModule, MatButtonToggleModule,
+             MatExpansionModule, 
+             MatRippleModule ],
   exports: [ MatButtonModule, MatCheckboxModule, MatStepperModule, 
              MatFormFieldModule, MatInputModule, MatDatepickerModule, 
-             MatNativeDateModule, MatCardModule ]
+             MatNativeDateModule, MatCardModule, MatToolbarModule, 
+             MatIconModule, MatSidenavModule, MatButtonToggleModule,
+             MatExpansionModule, 
+             MatRippleModule ]
 })
 export class NgMaterialModule { }
