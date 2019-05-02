@@ -21,6 +21,9 @@ import { CustomSiteComponent } from './components/events/events-create/custom-si
 import { NewEventFormComponent } from './components/events/events-create/new-event-form/new-event-form.component';
 import { NewEventConfirmComponent } from './components/events/events-create/new-event-confirm/new-event-confirm.component';
 import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
+import { AuthService } from "./services/auth/auth.service";
+import { LoginComponent } from './components/auth/login/login.component';
+import { DashnavComponent } from './components/dashboard/dashnav/dashnav.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 
 @NgModule({
@@ -28,8 +31,19 @@ import { NavComponent } from './components/shared/nav/nav.component';
     AppComponent, 
     HomeComponent, 
     UseCaseFormComponent, 
-    DashboardComponent, 
-     EventsCreateComponent, EventsCreateNavComponent, CustomSiteComponent, NewEventFormComponent, NewEventConfirmComponent, NavComponent
+    DashboardComponent,  
+    EventsCreateComponent, 
+    EventsCreateNavComponent, 
+    CustomSiteComponent, 
+    NewEventFormComponent, 
+    NewEventConfirmComponent, 
+    LoginComponent, 
+    DashnavComponent,
+    EventsCreateNavComponent, 
+    CustomSiteComponent, 
+    NewEventFormComponent, 
+    NewEventConfirmComponent, 
+    NavComponent
   ],
   imports: [
     BrowserModule, 
@@ -40,7 +54,7 @@ import { NavComponent } from './components/shared/nav/nav.component';
     MDBBootstrapModule.forRoot(),
     NgMaterialModule, 
     BrowserAnimationsModule],
-  providers: [SproutApiService],
+  providers: [SproutApiService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
