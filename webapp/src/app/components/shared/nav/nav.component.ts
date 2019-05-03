@@ -6,18 +6,19 @@ import {MatSidenav} from '@angular/material';
   templateUrl: 'nav.component.html',
   styleUrls: ['nav.component.scss']
 })
-export class NavComponent {
+export class NavComponent implements AfterViewInit {
   @ViewChildren(MatSidenav) sidenav: MatSidenav;
-  events: string[] = [];
-  opened: boolean = true;
+  paths = [
+    { name: 'Events', route: '/create-events' },
+    { name: 'Dashboard', route: '/dashboard' }
+  ];
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngAfterViewInit() {
-    
-    console.log(this.sidenav);
   }
 
   ngOnInit() {
-  }
+  }  
 }

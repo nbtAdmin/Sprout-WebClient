@@ -23,7 +23,6 @@ import { NewEventConfirmComponent } from './components/events/events-create/new-
 import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
 import { AuthService } from "./services/auth/auth.service";
 import { LoginComponent } from './components/auth/login/login.component';
-import { DashnavComponent } from './components/dashboard/dashnav/dashnav.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 
 @NgModule({
@@ -37,8 +36,7 @@ import { NavComponent } from './components/shared/nav/nav.component';
     CustomSiteComponent, 
     NewEventFormComponent, 
     NewEventConfirmComponent, 
-    LoginComponent, 
-    DashnavComponent,
+    LoginComponent,
     EventsCreateNavComponent, 
     CustomSiteComponent, 
     NewEventFormComponent, 
