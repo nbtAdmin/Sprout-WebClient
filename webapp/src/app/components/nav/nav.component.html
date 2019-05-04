@@ -7,8 +7,10 @@
   
 <mat-sidenav-container>
     <mat-sidenav #sidenav opened="false" mode="side">
-      <button class="btn btn-success" routerLink="/create-events"></button>
-      <button class="btn btn-success" routerLink="/dashboard"></button>
+      <a *ngFor="let path of paths"> 
+        <button mat-button routerLink={{path.route}}>{{path.name}}</button>
+        <br/>
+      </a>
     </mat-sidenav>
     <mat-sidenav-content>
         <router-outlet></router-outlet>
