@@ -4,6 +4,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "../../components/core/home.component";
 import { DashboardComponent } from "../../components/dashboard/dashboard.component";
 import { EventsCreateComponent } from "../../components/events/events-create/events-create.component";
+import { TemplateComponent } from "../../components/template/template.component";
 import { LoginComponent } from "../../components/auth/login/login.component";
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path:"login", component:LoginComponent },
   { path: "dashboard", component: DashboardComponent }, 
-  { path:"create-events", component: EventsCreateComponent }
+  { path:"create-events", component: EventsCreateComponent },
+  { path:"plan-events", component: TemplateComponent }
 ];
 
 @NgModule({
