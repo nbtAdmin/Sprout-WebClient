@@ -1,9 +1,16 @@
 <div class="card card-cascade narrower mb-4">
   <!-- Card image -->
   <div class="view view-cascade overlay">
-    <img
+    <img 
+      *ngIf="_showUseCase2"
       class="card-img-top"
-      src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"
+      src="https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-780000951144/website_images/create_event.png"
+      alt="Card image cap"
+    />
+    <img 
+      *ngIf="_showUseCase1"
+      class="card-img-top"
+      src="https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-780000951144/website_images/explore-events-food-and-wine-events.jpg"
       alt="Card image cap"
     />
     <a>

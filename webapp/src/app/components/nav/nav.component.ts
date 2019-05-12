@@ -11,6 +11,7 @@ import { Location } from "@angular/common";
 
 export class NavComponent {
   @ViewChildren(MatSidenav) sidenav: MatSidenav;
+  pageTitle: String = "";
   paths = [];
   
   constructor(private router: Router, location: Location) {
@@ -21,12 +22,21 @@ export class NavComponent {
             { name: 'Summary', route: '/create-events' },
             { name: 'Add Widget', route: '/dashboard' }
           ];
+          this.pageTitle = ""
           break;
         }
         case "/create-events": {
           this.paths = [
             { name: 'Overview', route: '/create-events' }
           ];
+          this.pageTitle = ""
+          break;
+        }
+        case "/find-events": {
+          this.paths = [
+            { name: 'Start Over', route: '/home' }
+          ];
+          this.pageTitle = "Find Events"
           break;
         }
         default: {
@@ -36,6 +46,7 @@ export class NavComponent {
             { name: 'What\'s Hot!', route: '/create-events' },
             { name: 'Dashboard', route: '/dashboard' }
           ];
+          this.pageTitle = ""
           break;
         }
       }

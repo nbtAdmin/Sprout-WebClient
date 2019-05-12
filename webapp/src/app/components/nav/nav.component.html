@@ -1,8 +1,11 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    Toolbar Title
+    <div id="title">
+      <h2> {{pageTitle}} </h2>
+    </div>
+    <img class="sprout_logo" src ="https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-780000951144/website_images/two_leaf_logo_small.png" />
 </mat-toolbar>
   
 <mat-sidenav-container>
