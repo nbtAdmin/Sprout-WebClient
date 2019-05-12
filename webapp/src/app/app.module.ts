@@ -23,6 +23,7 @@ import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
 import { AuthService } from "./services/auth/auth.service";
 import { LoginComponent } from './components/auth/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { EventsFindComponent } from './components/events/events-find/events-find.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { NavComponent } from './components/nav/nav.component';
     CustomSiteComponent, 
     NewEventFormComponent, 
     NewEventConfirmComponent, 
-    NavComponent
+    NavComponent, EventsFindComponent
   ],
   imports: [
     BrowserModule, 

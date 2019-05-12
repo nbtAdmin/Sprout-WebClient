@@ -25,6 +25,7 @@
       suscipit laboriosam, nisi ut aliquid ex ea commodi.
     </p>
     <!-- Button -->
-    <a class="btn btn-unique waves-effect waves-light" routerLink="/dashboard">Button</a>
+    <a *ngIf="_showUseCase2" class="btn btn-unique waves-effect waves-light" routerLink="/dashboard">Plan Events</a>
+    <a *ngIf="_showUseCase1" class="btn btn-unique waves-effect waves-light" routerLink="/find-events">Find Events</a>
   </div>
 </div>
