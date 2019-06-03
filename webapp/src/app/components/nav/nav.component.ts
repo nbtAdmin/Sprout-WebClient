@@ -12,20 +12,28 @@ import { Location } from "@angular/common";
 export class NavComponent {
   @ViewChildren(MatSidenav) sidenav: MatSidenav;
   paths = [];
-  
+
   constructor(private router: Router, location: Location) {
     router.events.subscribe(val => {
       switch (location.path()) {
         case "/dashboard": {
           this.paths = [
-            { name: 'Summary', route: '/create-events' },
-            { name: 'Add Widget', route: '/dashboard' }
+            { name: 'Summary', route: '/dashboard' },
+            { name: 'Add Widget', route: '/add-widgets' }
           ];
           break;
         }
         case "/create-events": {
           this.paths = [
             { name: 'Overview', route: '/create-events' }
+          ];
+          break;
+        }
+        case "/plan-events": {
+          this.paths = [
+            { name: 'Create Events', route: '/create-events' },
+            { name: 'Blank Dashboard', route: '/dashboard' },
+            { name: 'Tools', route: '/create-events' }
           ];
           break;
         }
