@@ -24,6 +24,7 @@ import { AuthService } from "./services/auth/auth.service";
 import { LoginComponent } from './components/auth/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TemplateComponent } from './components/template/template.component';
+import { WidgetComponent } from './components/widget/widget.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TemplateComponent } from './components/template/template.component';
     NewEventFormComponent, 
     NewEventConfirmComponent, 
     NavComponent, 
-    TemplateComponent
+    TemplateComponent,
+    WidgetComponent
   ],
   imports: [
     BrowserModule, 

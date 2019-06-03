@@ -6,6 +6,7 @@ import { DashboardComponent } from "../../components/dashboard/dashboard.compone
 import { EventsCreateComponent } from "../../components/events/events-create/events-create.component";
 import { TemplateComponent } from "../../components/template/template.component";
 import { LoginComponent } from "../../components/auth/login/login.component";
+import { WidgetComponent } from "../../components/widget/widget.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path:"login", component:LoginComponent },
   { path: "dashboard", component: DashboardComponent }, 
   { path:"create-events", component: EventsCreateComponent },
-  { path:"plan-events", component: TemplateComponent }
+  { path:"plan-events", component: TemplateComponent },
+  { path:"add-events", component: TemplateComponent },
+  { path:"add-widgets", component: WidgetComponent }
 ];
 
 @NgModule({
