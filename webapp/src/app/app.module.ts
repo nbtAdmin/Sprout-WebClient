@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SproutApiService } from "./services/sprout/sprout-api.service";
 import { EventsCreateComponent } from './components/events/events-create/events-create.component';
+import { EventsPlanComponent } from './components/events/events-plan/events-plan.component';
 import { CustomSiteComponent } from './components/events/events-create/custom-site/custom-site.component';
 import { NewEventFormComponent } from './components/events/events-create/new-event-form/new-event-form.component';
 import { NewEventConfirmComponent } from './components/events/events-create/new-event-confirm/new-event-confirm.component';
@@ -23,7 +24,6 @@ import { NgMaterialModule } from "./app-modules/ng-material/ng-material.module";
 import { AuthService } from "./services/auth/auth.service";
 import { LoginComponent } from './components/auth/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
-import { TemplateComponent } from './components/template/template.component';
 import { WidgetComponent } from './components/widget/widget.component';
 
 @NgModule({
@@ -41,8 +41,8 @@ import { WidgetComponent } from './components/widget/widget.component';
     NewEventFormComponent, 
     NewEventConfirmComponent, 
     NavComponent, 
-    TemplateComponent,
-    WidgetComponent
+    WidgetComponent,
+    EventsPlanComponent
   ],
   imports: [
     BrowserModule, 
