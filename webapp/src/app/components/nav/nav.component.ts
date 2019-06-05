@@ -18,7 +18,6 @@ export class NavComponent {
       switch (location.path()) {
         case "/dashboard": {
           this.paths = [
-            { name: 'Summary', route: '/dashboard' },
             { name: 'Add Widget', route: '/add-widgets' }
           ];
           break;
